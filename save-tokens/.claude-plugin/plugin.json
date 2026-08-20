@@ -1,0 +1,8 @@
+{
+  "name": "save-tokens",
+  "description": "Run a session on a small token budget by delegating legwork to subagents on cheaper models.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

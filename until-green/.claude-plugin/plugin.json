@@ -1,0 +1,8 @@
+{
+  "name": "until-green",
+  "description": "Own the post-push loop on a PR: watch CI, triage bot comments, fix, repeat until green.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

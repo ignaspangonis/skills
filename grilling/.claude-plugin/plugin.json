@@ -1,0 +1,8 @@
+{
+  "name": "grilling",
+  "description": "Grill the user relentlessly about a plan, decision, or idea.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

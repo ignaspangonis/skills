@@ -1,0 +1,30 @@
+{
+  "name": "ignaspangonis-skills",
+  "description": "Skills for token-frugal sessions, cutting AI tells from writing, stress-testing plans, and landing PRs.",
+  "owner": {
+    "name": "Ignas Pangonis",
+    "url": "https://github.com/ignaspangonis"
+  },
+  "plugins": [
+    {
+      "name": "save-tokens",
+      "source": "./save-tokens",
+      "description": "Run a session on a small token budget by delegating legwork to subagents on cheaper models."
+    },
+    {
+      "name": "unslop",
+      "source": "./unslop",
+      "description": "Cut AI tells from any writing."
+    },
+    {
+      "name": "grilling",
+      "source": "./grilling",
+      "description": "Grill the user relentlessly about a plan, decision, or idea."
+    },
+    {
+      "name": "until-green",
+      "source": "./until-green",
+      "description": "Own the post-push loop on a PR: watch CI, triage bot comments, fix, repeat until green."
+    }
+  ]
+}
