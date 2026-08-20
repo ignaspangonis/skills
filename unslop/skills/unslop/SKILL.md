@@ -5,76 +5,48 @@ description: Cut AI tells from any writing. Must always apply.
 
 # Unslop
 
-Edit text to remove AI patterns and add human voice.
+Remove AI patterns, add human voice. Keep every fact from the source; cut wording, not information. Preserve intended tone. Finish with a self-audit: "What makes this obviously AI generated?" Fix what's left.
 
-## Process
+## Add soul
 
-1. Scan for the patterns below.
-2. Rewrite. Preserve meaning, match intended tone.
-3. Add soul (see next section).
-4. Self-audit: "What makes this obviously AI generated?" Fix remaining tells.
+Sterile writing is as obvious as sloppy writing. Have opinions instead of neutrally listing pros and cons. Vary sentence length. Use "I" when it fits. Be specific: not "this is concerning" but "agents churning away at 3am". Perfect structure looks machine-made, so let some mess in.
 
-## Adding soul
+Specificity comes from the source, never from you. If the source has no concrete detail, cut the vague sentence instead of inventing a concrete one. Never add facts, dates, history, or commitments the original doesn't contain.
 
-Removing patterns is half the job. Sterile, voiceless writing is just as obvious.
+## Cut these words
 
-- **Have opinions.** React to facts instead of neutrally listing pros and cons.
-- **Vary rhythm.** Short sentences. Then longer ones that take their time. Mix it up.
-- **Acknowledge complexity.** "Impressive but also kind of unsettling" beats "impressive."
-- **Use "I" when it fits.** First person isn't unprofessional.
-- **Let some mess in.** Perfect structure looks machine-made.
-- **Be specific.** Not "this is concerning" but "there's something unsettling about agents churning away at 3am."
+- Puffery and AI vocabulary: pivotal, testament, delve, crucial, showcase, underscore, tapestry, landscape (abstract), vibrant, breathtaking, groundbreaking, renowned, nestled, stunning, fostering, intricate, enduring, garner, interplay, enhance, additionally, must-visit. State what happened in plain words.
+- Abstract metaphor nouns: substrate, wedge, vector, nexus, locus, primitive, harness, bedrock, scaffolding, modality, paradigm, flywheel, north star, endgame, ratchet, gold-plating. Use the concrete word: "substrate" is "base", "wedge in" is "add".
+- Fancy synonyms: utilize is "use", leverage is "use", facilitate is "help", numerous is "many". "Serves as", "stands as", "boasts", "features" are "is" or "has".
+- Filler: "in order to" is "to", "due to the fact that" is "because", "it is important to note that" gets deleted.
 
-## Patterns to detect and fix
+## Cut these constructions
 
-### Content
+- "Not just X, but Y". State the point directly.
+- Rule of three. Use the natural number of items.
+- False ranges ("from X to Y" with no real scale). List the topics.
+- Synonym cycling. Pick one word and repeat it.
+- Vague attribution ("experts believe", "reports suggest"). Name the source or delete.
+- Name-dropping media outlets without context. Pick one, say what it said.
+- Superficial -ing tails ("...highlighting the importance of"). Delete or expand with facts.
+- Formulaic arcs ("despite challenges... continues to thrive", "the future looks bright"). Specific facts only.
+- Stacked hedging ("could potentially possibly"). One "may" is enough.
+- Adverbs propping up weak verbs ("significantly improves"). Stronger verb or the measured number.
+- Passive voice. Name the actor ("the compiler validates queries") unless the actor truly doesn't matter.
+- Dense sentences. If the reader backtracks to parse it, split it. One idea per sentence.
 
-1. **Puffery.** "pivotal moment", "testament to", "evolving landscape", "setting the stage for", "indelible mark", "deeply rooted". Cut puffery, state what happened.
-2. **Name-dropping.** Listing media outlets without context. Pick one, say what was said.
-3. **Superficial -ing phrases.** "highlighting...", "ensuring...", "reflecting...", "showcasing...", "fostering...". Delete or expand with real sources.
-4. **Promotional language.** "nestled", "vibrant", "breathtaking", "groundbreaking", "renowned", "stunning", "must-visit". Use neutral descriptions.
-5. **Vague attributions.** "Experts believe", "Industry reports suggest", "Some critics argue". Name the source or delete.
-6. **Formulaic challenges.** "Despite challenges... continues to thrive." Replace with specific facts.
+## Style
 
-### Language
+- No em dashes, and no parentheses or en dashes as substitutes. End the sentence or use a comma.
+- Colons only before a list or example, never as mid-sentence connectors.
+- Sentence case headings. No decorative emojis. Straight quotes.
+- Don't bold every proper noun. A bold label that restates its line ("**Performance:** performance improved...") becomes prose; a bold lead-in followed by genuinely new detail is fine.
 
-7. **AI vocabulary.** Additionally, crucial, delve, enduring, enhance, fostering, garner, interplay, intricate, landscape (abstract), pivotal, showcase, tapestry (abstract), testament, underscore, vibrant. Replace with plain words.
-8. **Fancy ways to say "is".** "serves as", "stands as", "boasts", "features". Just say "is" or "has".
-9. **"Not just X, but Y."** State the point directly instead.
-10. **Rule of three.** Forcing ideas into groups of three. Use the natural number.
-11. **Synonym cycling.** Protagonist, main character, central figure, hero all in one paragraph. Pick one, repeat it.
-12. **False ranges.** "from X to Y" where X and Y aren't on a meaningful scale. List topics directly.
+## Communication artifacts
 
-### Style
+- No chatbot phrases ("Hope this helps!", "Great question!", "Certainly!"). Respond directly.
+- No cutoff disclaimers ("while specific details are limited..."). Find sources or cut.
 
-13. **Em dash overuse.** Avoid em dashes entirely. Use periods or commas only (no parentheses, no en dashes, no hyphen-as-dash substitutes). Em dashes are an AI tell, and reaching for parentheses instead just trades one tell for another. If a thought needs separation, end the sentence or use a comma.
-14. **Colon overuse.** Colons are fine before a list or example. Not as mid-sentence connectors. "If you're coming from traditional automation: instead of registering event handlers, you describe conditions" adds nothing with the colon. Rewrite to let the point stand on its own without comparison framing. "Describing when the scheduler should fire works best as plain English." Same meaning, no crutch punctuation.
-15. **Boldface overuse.** Don't bold every proper noun or acronym.
-16. **Inline-header lists.** The tell is a bold label and colon that restates the line: "**Performance:** Performance improved...". Convert those to prose. A bold lead-in that ends in a period, names the item, and is followed by genuinely new detail ("**Schema in TypeScript.** Tables live in one file.") is fine, not a tell.
-17. **Title case headings.** Use sentence case.
-18. **Decorative emojis.** Remove from headings and bullets.
-19. **Curly quotes.** Replace with straight quotes.
+## Plain speech
 
-### Communication artifacts
-
-20. **Chatbot phrases.** "I hope this helps!", "Let me know if...", "Of course!", "Certainly!", "Found the smoking gun!" Remove.
-21. **Cutoff disclaimers.** "While specific details are limited..." Find sources or remove.
-22. **Sycophantic tone.** "Great question! You're absolutely right!" Respond directly.
-
-### Filler
-
-23. **Filler phrases.** "In order to" becomes "To". "Due to the fact that" becomes "Because". "It is important to note that" gets deleted.
-24. **Excessive hedging.** "could potentially possibly be argued that it might" becomes "may".
-25. **Generic conclusions.** "The future looks bright." State specific plans or facts.
-
-### Jargon
-
-26. **Abstract metaphor nouns.** Substrate, wedge, vector, locus, vantage, nexus, primitive (as noun), harness (as metaphor), surface (as in "API surface"), bedrock, scaffolding (as metaphor), modality, paradigm, gold-plating, ratchet (as metaphor), evacuate (for moving code), endgame, north star, flywheel. These read as technical but usually have a plainer concrete word. "Substrate" becomes "base". "Wedge in" becomes "add". "Vector" becomes "way" or "method". "Gold-plating" becomes "more than the job needs". "Ratchet" becomes the mechanism's real name or "a limit that only tightens". "Evacuate" becomes "move out". "Endgame" becomes "the last phase". Pick the concrete word.
-
-### Plain speech
-
-27. **Say what it does, not how it feels.** "the database stays close at hand", "SQL you can read", "types that follow your schema" name a feeling. The fix names the mechanism or a number: "`.toSQL()` returns the exact string sent to the database", "a column rename fails the build". Ask what the sentence tells the reader to do or know, then write that. If you can't restate it as a concrete instruction, fact, or number, cut it. One more check: if the sentence could appear unchanged in another project's docs, it says nothing about this one. Cut it.
-28. **Shorten or split dense sentences.** If the reader has to backtrack to parse a sentence, break it in two or drop clauses. One idea per sentence.
-29. **Active voice.** Prefer it. Catch "is/are/was/were + past participle" and name the actor: "queries are validated" becomes "the compiler validates queries", "the file is parsed by the loader" becomes "the loader parses the file". Passive is fine only when the actor is unknown or genuinely doesn't matter.
-30. **Cut adverbs, or use a stronger verb.** "runs quickly" becomes "is fast" or the number. "significantly improves" becomes the measured delta. An adverb propping up a weak verb means the verb is wrong.
-31. **Prefer the plain word.** "utilize" becomes "use", "leverage" becomes "use", "facilitate" becomes "help", "numerous" becomes "many", "in the event that" becomes "if". The fancier synonym is rarely clearer.
+Say what it does, not how it feels. "SQL you can read" names a feeling; the fix names the mechanism or a number. If a sentence can't be restated as a concrete instruction, fact, or number, or could appear unchanged in another project's docs, cut it.
