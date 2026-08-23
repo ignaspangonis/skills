@@ -13,10 +13,13 @@ Sterile writing is as obvious as sloppy writing. Have opinions instead of neutra
 
 Specificity comes from the source, never from you. If the source has no concrete detail, cut the vague sentence instead of inventing a concrete one. Never add facts, dates, history, or commitments the original doesn't contain.
 
+Uniform certainty is as machine-made as stacked hedging. Mark claims the author inferred rather than verified ("as I understand", "if so") and let verified facts stand plain. One hedge per claim.
+
 ## Cut these words
 
 - Puffery and AI vocabulary: pivotal, testament, delve, crucial, showcase, underscore, tapestry, landscape (abstract), vibrant, breathtaking, groundbreaking, renowned, nestled, stunning, fostering, intricate, enduring, garner, interplay, enhance, additionally, must-visit. State what happened in plain words.
 - Abstract metaphor nouns: substrate, wedge, vector, nexus, locus, primitive, harness, bedrock, scaffolding, modality, paradigm, flywheel, north star, endgame, ratchet, gold-plating. Use the concrete word: "substrate" is "base", "wedge in" is "add".
+- Coined category nouns ("every layout shape we have", "the surface area of the change"). Use the plain word: "everywhere", "what changed".
 - Fancy synonyms: utilize is "use", leverage is "use", facilitate is "help", numerous is "many". "Serves as", "stands as", "boasts", "features" are "is" or "has".
 - Filler: "in order to" is "to", "due to the fact that" is "because", "it is important to note that" gets deleted.
 
@@ -31,6 +34,7 @@ Specificity comes from the source, never from you. If the source has no concrete
 - Superficial -ing tails ("...highlighting the importance of"). Delete or expand with facts.
 - Formulaic arcs ("despite challenges... continues to thrive", "the future looks bright"). Specific facts only.
 - Stacked hedging ("could potentially possibly"). One "may" is enough.
+- Argument meta-narration ("My point is...", "To be clear...", "In other words..."). Make the point with a plain connective: "but", "still".
 - Adverbs propping up weak verbs ("significantly improves"). Stronger verb or the measured number.
 - Passive voice. Name the actor ("the compiler validates queries") unless the actor truly doesn't matter.
 - Dense sentences. If the reader backtracks to parse it, split it. One idea per sentence.
