@@ -10,7 +10,7 @@ In Claude Code:
 /plugin install <name>@ignaspangonis-skills
 ```
 
-Or copy any `skills/<name>` folder into `~/.claude/skills/`.
+Or copy any `skills/<name>` folder into `~/.agents/skills/` or `~/.claude/skills/`.
 
 ## Skills
 
