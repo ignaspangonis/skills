@@ -1,9 +1,10 @@
 # skills
 
-Claude Code skills I created and use daily, packaged as a plugin marketplace.
+Skills I created and use daily, packaged as a plugin marketplace.
 
 ## Install
 
+In Claude Code:
 ```
 /plugin marketplace add ignaspangonis/skills
 /plugin install <name>@ignaspangonis-skills
