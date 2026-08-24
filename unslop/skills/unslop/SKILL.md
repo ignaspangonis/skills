@@ -13,13 +13,14 @@ Sterile writing is as obvious as sloppy writing. Have opinions instead of neutra
 
 Specificity comes from the source, never from you. If the source has no concrete detail, cut the vague sentence instead of inventing a concrete one. Never add facts, dates, history, or commitments the original doesn't contain.
 
-Uniform certainty is as machine-made as stacked hedging. Mark claims the author inferred rather than verified ("as I understand", "if so") and let verified facts stand plain. One hedge per claim.
+Uniform certainty is as machine-made as stacked hedging. Mark claims the author inferred rather than verified ("as I understand", "as I can see", "if so") and let verified facts stand plain. One hedge per claim.
 
 ## Cut these words
 
 - Puffery and AI vocabulary: pivotal, testament, delve, crucial, showcase, underscore, tapestry, landscape (abstract), vibrant, breathtaking, groundbreaking, renowned, nestled, stunning, fostering, intricate, enduring, garner, interplay, enhance, additionally, must-visit. State what happened in plain words.
 - Abstract metaphor nouns: substrate, wedge, vector, nexus, locus, primitive, harness, bedrock, scaffolding, modality, paradigm, flywheel, north star, endgame, ratchet, gold-plating. Use the concrete word: "substrate" is "base", "wedge in" is "add".
 - Coined category nouns ("every layout shape we have", "the surface area of the change"). Use the plain word: "everywhere", "what changed".
+- Coined shorthand ("fresh-mount nav") and generic stand-ins ("the transition", "placeholders"). Name the artifact with the reader's word, the file, flag, or team term ("loading.tsx", "skeletons"), even when longer.
 - Fancy synonyms: utilize is "use", leverage is "use", facilitate is "help", numerous is "many". "Serves as", "stands as", "boasts", "features" are "is" or "has".
 - Filler: "in order to" is "to", "due to the fact that" is "because", "it is important to note that" gets deleted.
 
@@ -41,10 +42,19 @@ Uniform certainty is as machine-made as stacked hedging. Mark claims the author 
 
 ## Style
 
-- No em dashes, and no parentheses or en dashes as substitutes. End the sentence or use a comma.
+- No em dashes or en dashes as clause glue. End the sentence or use a comma.
+- Parentheses only for a short aside that adds standing or a cross-reference ("(from the other thread)"), never as a dash substitute grafting a clause.
+- Arrows only as domain notation ("item page → catalog"), never as a prose connective ("A → B → fails").
 - Colons only before a list or example, never as mid-sentence connectors.
 - Sentence case headings. No decorative emojis. Straight quotes.
 - Don't bold every proper noun. A bold label that restates its line ("**Performance:** performance improved...") becomes prose; a bold lead-in followed by genuinely new detail is fine.
+
+## Replies in threads
+
+- State your standing first when it changes how the reply lands ("I approved the RFC, so this is not blocking").
+- Quote the line you answer with ">" instead of paraphrasing it.
+- No numbered question lists. Fold the ask into one hedged sentence: "Not sure which layout.tsx you plan to test, perhaps worth noting in the RFC."
+- One point per message. Don't pre-answer follow-ups with metrics, options, or contingencies. "Worth its own measurement later" leaves the door open; the details wait for the question.
 
 ## Communication artifacts
 
