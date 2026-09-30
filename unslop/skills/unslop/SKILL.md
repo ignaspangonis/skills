@@ -23,6 +23,7 @@ Uniform certainty is as machine-made as stacked hedging. Mark claims the author 
 - Coined shorthand ("fresh-mount nav") and generic stand-ins ("the transition", "placeholders"). Name the artifact with the reader's word, the file, flag, or team term ("loading.tsx", "skeletons"), even when longer.
 - Fancy synonyms: utilize is "use", leverage is "use", facilitate is "help", numerous is "many". "Serves as", "stands as", "boasts", "features" are "is" or "has".
 - Filler: "in order to" is "to", "due to the fact that" is "because", "it is important to note that" gets deleted.
+- Verbs with two readings in context: "this RFC fixes the principles" can mean repairs. Use "sets".
 
 ## Cut these constructions
 
@@ -39,6 +40,21 @@ Uniform certainty is as machine-made as stacked hedging. Mark claims the author 
 - Adverbs propping up weak verbs ("significantly improves"). Stronger verb or the measured number.
 - Passive voice. Name the actor ("the compiler validates queries") unless the actor truly doesn't matter.
 - Dense sentences. If the reader backtracks to parse it, split it. One idea per sentence.
+
+## Long documents
+
+For RFCs, specs, and docs with several sections:
+
+- Give each fact one home. When another section needs it, name or link that section instead of restating it. Merge lists that track the same questions (asks, open questions, to-dos) into one list with an owner per item.
+- State the current fact and its source, not how the author got there. Cut review history: "a reviewer confused the two", "reviewers agree", "first chosen because X, that need is gone".
+- Write for the stated readers. Move detail only one group needs (file paths, framework internals, one platform's mechanics) to an appendix.
+- Define every acronym, service, and team term on first use. Don't cite a label ("option B", "ask 6", "principle 4") before the section that defines it.
+- Give a rejected alternative one line of reason. No examples or code blocks for options nobody will build.
+- Keep one form for spelling, units, and numbers ("colour" or "color", "256 GB" or "256GB", "10" or "ten"), and match the prose to the data samples.
+- Put each item under a heading that names it, and each caption beside what it describes. Split lists that mix kinds, such as fields with behaviour, or asks to different owners.
+- Don't mark a claim decided when it rests on an inference or an open ask. Label it an assumption.
+- Before finishing, check rules from different sections against each other. Two rules that can't both hold ("disable the selector during a pick" and "latest pick wins") are a contradiction to fix.
+- Leave no empty fields, blank dates, or filler lines that repeat their heading ("TBA: decide after designs" under "After designs").
 
 ## Style
 
