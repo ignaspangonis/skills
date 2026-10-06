@@ -1,6 +1,6 @@
 {
   "name": "ignaspangonis-skills",
-  "description": "Skills for token-frugal sessions, cutting AI tells from writing, stress-testing plans, and landing PRs.",
+  "description": "Skills for token-frugal sessions, cutting AI tells from writing, writing clear docs, stress-testing plans, and landing PRs.",
   "owner": {
     "name": "Ignas Pangonis",
     "url": "https://github.com/ignaspangonis"
@@ -25,6 +25,11 @@
       "name": "until-green",
       "source": "./until-green",
       "description": "Own the post-push loop on a PR: watch CI, triage bot comments, fix, repeat until green."
+    },
+    {
+      "name": "tech-writing",
+      "source": "./tech-writing",
+      "description": "Write or edit docs by Google's technical writing rules: say it once, cut empty words, use concrete terms."
     }
   ]
 }

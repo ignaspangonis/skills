@@ -19,6 +19,7 @@ Or copy any `skills/<name>` folder into `~/.agents/skills/` or `~/.claude/skills
 | `save-tokens` | `/save-tokens` | Runs the session on a small token budget. Delegates legwork to subagents on cheaper models and keeps interfaces between agents small. |
 | `unslop` | `/unslop` or auto | Cuts AI tells from writing: puffery, filler, em dash overuse, chatbot phrases. Then adds voice back. |
 | `grilling` | `/grilling` or auto | Interviews you relentlessly about a plan or decision, one question at a time, until you reach shared understanding. |
+| `tech-writing` | `/tech-writing` or auto | Writes and edits docs by Google's technical writing rules: says each idea once, cuts empty words, swaps vague terms for concrete ones, keeps commands safe to paste. |
 | `until-green` | `/until-green [pr]` | Owns the post-push loop on a PR: watches CI, triages review-bot comments, fixes real issues, repeats until every blocking check is green. Drafts replies but never submits them, never merges. |
 
 ## License
