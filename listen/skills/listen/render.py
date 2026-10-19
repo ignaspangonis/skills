@@ -53,10 +53,10 @@ for index, section in enumerate(data["sections"]):
         }
     )
 
-payload = json.dumps({"title": data.get("title", "Listen"), "sections": sections}).replace("</", "<\\/")
+payload = json.dumps({"title": data.get("title", "Listen"), "sections": sections}).replace("<", "\\u003c")
 template = (Path(__file__).parent / "page.html").read_text()
 page = run / "index.html"
-page.write_text(template.replace("__TITLE__", data.get("title", "Listen")).replace("__DATA__", payload))
+page.write_text(template.replace("__DATA__", payload))
 
 subprocess.run(["open", str(page)], check=True)
 print(page)
