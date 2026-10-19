@@ -25,6 +25,11 @@
       "name": "until-green",
       "source": "./until-green",
       "description": "Own the post-push loop on a PR: watch CI, triage bot comments, fix, repeat until green."
+    },
+    {
+      "name": "listen",
+      "source": "./listen",
+      "description": "Hear the current problem or open question read aloud, with an optional narrated page."
     }
   ]
 }

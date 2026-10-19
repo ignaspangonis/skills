@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Listen</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"
+      integrity="sha384-+VfUPEb0PdtChMwmBcBmykRMDd+v6D/oFmB3rZM/puCMDYcIvF968OimRh4KQY9a"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"
+      integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"
+      integrity="sha384-WmdflGW9aGfoBdHc4rRyWzYuAjEmDwMdGdiPNacbwfGKxBW/SO6guzuQ76qjnSlr"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      :root {
+        --bg: #f7f7f5;
+        --card: #ffffff;
+        --text: #1c1c1c;
+        --muted: #6b6b6b;
+        --line: #e4e4e0;
+        --accent: #0b7a75;
+        --accent-soft: #e3f3f2;
+        --ask: #b45309;
+        --ask-soft: #fdf3e6;
+        --code: #f0f0ec;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #151515;
+          --card: #1f1f1f;
+          --text: #ececec;
+          --muted: #9a9a9a;
+          --line: #333333;
+          --accent: #4fd1c5;
+          --accent-soft: #17302e;
+          --ask: #f6ad55;
+          --ask-soft: #33261a;
+          --code: #2a2a2a;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          18px/1.6 -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 24px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        margin: 0;
+        font-size: 20px;
+        flex: 1;
+      }
+      button {
+        font: inherit;
+        font-size: 16px;
+        padding: 8px 18px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--bg);
+        cursor: pointer;
+      }
+      .hint {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      main {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 24px 16px 40vh;
+      }
+      section {
+        margin: 0 0 16px;
+        padding: 18px 22px;
+        background: var(--card);
+        border: 2px solid var(--line);
+        border-radius: 14px;
+        opacity: 0.55;
+        cursor: pointer;
+        transition:
+          opacity 200ms ease,
+          border-color 200ms ease,
+          background 200ms ease;
+      }
+      section.active {
+        opacity: 1;
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+      section.question {
+        border-color: var(--ask);
+      }
+      section.question.active {
+        background: var(--ask-soft);
+      }
+      main:not(.started) section {
+        opacity: 1;
+      }
+      .label {
+        margin: 0 0 6px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      section.question .label {
+        color: var(--ask);
+      }
+      .show > :first-child {
+        margin-top: 0;
+      }
+      .show > :last-child {
+        margin-bottom: 0;
+      }
+      code {
+        background: var(--code);
+        padding: 1px 6px;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+      pre {
+        background: var(--code);
+        padding: 12px 14px;
+        border-radius: 10px;
+        overflow-x: auto;
+      }
+      pre code {
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 16px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .mermaid {
+        display: flex;
+        justify-content: center;
+        background: var(--card);
+        border-radius: 10px;
+        padding: 8px;
+      }
+      details {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      summary {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title"></h1>
+      <span class="hint">space play/pause · ← → step · click a card</span>
+      <button id="toggle">Play</button>
+    </header>
+    <main id="cards"></main>
+    <script type="application/json" id="data">
+      __DATA__
+    </script>
+    <script>
+      const data = JSON.parse(document.getElementById('data').textContent)
+      const cards = document.getElementById('cards')
+      const toggle = document.getElementById('toggle')
+      const audio = new Audio()
+      let current = -1
+
+      document.title = data.title
+      document.getElementById('title').textContent = data.title
+
+      const nodes = data.sections.map((section, index) => {
+        const node = document.createElement('section')
+        node.className = section.kind
+        const label = document.createElement('p')
+        label.className = 'label'
+        label.textContent = section.label
+        const show = document.createElement('div')
+        show.className = 'show'
+        if (section.show) show.innerHTML = DOMPurify.sanitize(marked.parse(section.show))
+        else show.textContent = section.say
+        show.querySelectorAll('code.language-mermaid').forEach(code => {
+          const diagram = document.createElement('div')
+          diagram.className = 'mermaid'
+          diagram.textContent = code.textContent
+          code.parentElement.replaceWith(diagram)
+        })
+        node.append(label, show)
+        if (section.show) {
+          const details = document.createElement('details')
+          details.innerHTML = '<summary>Transcript</summary>'
+          details.append(section.say)
+          details.addEventListener('click', event => event.stopPropagation())
+          node.append(details)
+        }
+        node.addEventListener('click', () => playFrom(index))
+        cards.append(node)
+        return node
+      })
+
+      const dark = matchMedia('(prefers-color-scheme: dark)').matches
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'strict',
+        theme: dark ? 'dark' : 'neutral',
+      })
+      mermaid.run()
+
+      function render() {
+        cards.classList.toggle('started', current >= 0)
+        nodes.forEach((node, index) => node.classList.toggle('active', index === current))
+        toggle.textContent = audio.paused ? (audio.currentTime > 0 ? 'Resume' : 'Play') : 'Pause'
+      }
+
+      function playFrom(index) {
+        if (index < 0 || index >= nodes.length) {
+          current = -1
+          audio.pause()
+          render()
+          return
+        }
+        current = index
+        audio.src = data.sections[index].audio
+        nodes[index].scrollIntoView({ behavior: 'smooth', block: 'center' })
+        audio
+          .play()
+          .catch(() => {})
+          .finally(render)
+        render()
+      }
+
+      function togglePlay() {
+        if (current < 0) return playFrom(0)
+        if (audio.paused) audio.play().finally(render)
+        else audio.pause()
+        render()
+      }
+
+      audio.addEventListener('ended', () => playFrom(current + 1))
+      audio.addEventListener('pause', render)
+      audio.addEventListener('play', render)
+      toggle.addEventListener('click', togglePlay)
+      document.addEventListener('keydown', event => {
+        if (event.key === ' ') {
+          event.preventDefault()
+          togglePlay()
+        }
+        if (event.key === 'ArrowRight') playFrom(current + 1)
+        if (event.key === 'ArrowLeft') playFrom(Math.max(current - 1, 0))
+      })
+
+      playFrom(0)
+    </script>
+  </body>
+</html>
