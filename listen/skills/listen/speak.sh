@@ -33,8 +33,11 @@ case "${1:-}" in
     ;;
 esac
 
-text="$(cat)"
-[[ -n "${text//[[:space:]]/}" ]] || { echo "No text on stdin." >&2; exit 1; }
+input="${1:-}"
+[[ -f "$input" ]] || { echo "Usage: speak.sh <script file> | --again | --stop" >&2; exit 1; }
+text="$(cat "$input")"
+rm -f "$input"
+[[ -n "${text//[[:space:]]/}" ]] || { echo "The script file is empty." >&2; exit 1; }
 
 stamp="$(date +%Y%m%d-%H%M%S)"
 printf '%s\n' "$text" >"$dir/$stamp.txt"

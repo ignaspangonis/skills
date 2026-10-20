@@ -1,7 +1,7 @@
 {
   "name": "listen",
   "description": "Hear the current problem or open question read aloud, or open it as a narrated page with visuals.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Ignas Pangonis"
   }
