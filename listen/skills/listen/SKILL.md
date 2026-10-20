@@ -10,7 +10,8 @@ argument-hint: '[show] [focus] | again | stop'
 - If `$ARGUMENTS` is `again`, run `<base>/speak.sh --again` and end the turn.
 - If `$ARGUMENTS` starts with `show`, follow **Show it**. Otherwise follow **Speak it**.
 - Cover the latest open problem or question in this conversation. If `$ARGUMENTS` names a focus, cover only that.
-- Do **not** run any other tool or change any file. This turn only explains.
+- Do **not** run any other tool or change any other file. This turn only explains.
+- Pass content through a file, never a heredoc or inline string. A worktree-isolated session refuses long or symbol-heavy shell commands. Save the content with the Write tool to `/tmp/claude-listen/input-<random>.<ext>`, using a new random name each run, then pass that path. The scripts delete the file after reading it.
 
 ## Script content
 
@@ -35,12 +36,10 @@ If there is no open question, replace parts 3 to 5 with what happens next and wh
 
 ## Speak it
 
-- Pipe the script through a quoted heredoc:
+- Write the script to `/tmp/claude-listen/input-<random>.txt`, then run:
 
 ```bash
-<base>/speak.sh <<'EOF'
-<script>
-EOF
+<base>/speak.sh /tmp/claude-listen/input-<random>.txt
 ```
 
 - After the command returns, print the same script as plain text so the user can read along, then one line: `Say /listen again to replay, /listen stop to stop.`
@@ -53,12 +52,19 @@ EOF
 - Do **not** repeat `say` word for word in `show`. Keep each `show` under 12 lines.
 - For `options`, use a table: one row per option, columns for what changes, cost, and risk.
 - When a flow, call chain, or before/after helps, add one ` ```mermaid ` diagram in the section where it helps most. Keep it under 10 nodes.
-- Pipe the JSON through a quoted heredoc. The command opens the page in the browser and prints its path:
+- Write the JSON to `/tmp/claude-listen/input-<random>.json`:
+
+```json
+{
+  "title": "<short title>",
+  "sections": [{ "kind": "context", "say": "<spoken>", "show": "<markdown>" }]
+}
+```
+
+- Run the command below. It opens the page in the browser and prints its path:
 
 ```bash
-/usr/bin/python3 <base>/render.py <<'EOF'
-{"title": "<short title>", "sections": [{"kind": "context", "say": "<spoken>", "show": "<markdown>"}]}
-EOF
+/usr/bin/python3 <base>/render.py /tmp/claude-listen/input-<random>.json
 ```
 
 - After the command returns, print the page path and one line: `Press space on the page to play or pause.`

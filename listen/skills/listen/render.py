@@ -16,7 +16,9 @@ KINDS = {
     "next": "What happens next",
 }
 
-data = json.load(sys.stdin)
+source = Path(sys.argv[1])
+data = json.loads(source.read_text())
+source.unlink()
 root = Path(os.environ.get("TMPDIR") or tempfile.gettempdir()) / "claude-listen"
 run = root / datetime.now().strftime("%Y%m%d-%H%M%S")
 run.mkdir(parents=True, exist_ok=True)
