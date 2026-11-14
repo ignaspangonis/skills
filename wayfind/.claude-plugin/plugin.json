@@ -1,0 +1,8 @@
+{
+  "name": "wayfind",
+  "description": "Turn a foggy idea into a plan by naming the destination and resolving open decisions one at a time.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "ignaspangonis-skills",
-  "description": "Skills for token-frugal sessions, cutting AI tells from writing, stress-testing plans, and landing PRs.",
+  "description": "Skills for token-frugal sessions, clear writing, PR descriptions, stress-testing plans, and landing PRs.",
   "owner": {
     "name": "Ignas Pangonis",
     "url": "https://github.com/ignaspangonis"
@@ -27,9 +27,34 @@
       "description": "Own the post-push loop on a PR: watch CI, triage bot comments, fix, repeat until green."
     },
     {
+      "name": "tech-writing",
+      "source": "./tech-writing",
+      "description": "Write or edit docs by Google's technical writing rules: say it once, cut empty words, use concrete terms."
+    },
+    {
       "name": "listen",
       "source": "./listen",
       "description": "Hear the current problem or open question read aloud, with an optional narrated page."
+    },
+    {
+      "name": "wayfind",
+      "source": "./wayfind",
+      "description": "Turn a foggy idea into a plan by naming the destination and resolving open decisions one at a time."
+    },
+    {
+      "name": "git-conventions",
+      "source": "./git-conventions",
+      "description": "An example of personal branch and PR-title naming rules, including numbered stacked branches."
+    },
+    {
+      "name": "grill-board",
+      "source": "./grill-board",
+      "description": "Grill a plan with your team on a shared claude.ai decision board, one round of tickets at a time."
+    },
+    {
+      "name": "writing-prs",
+      "source": "./writing-prs",
+      "description": "A length budget for PR descriptions: short Context, short This PR, no diff narration."
     }
   ]
 }

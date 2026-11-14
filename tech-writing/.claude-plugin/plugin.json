@@ -1,0 +1,8 @@
+{
+  "name": "tech-writing",
+  "description": "Write or edit docs by Google's technical writing rules: say it once, cut empty words, use concrete terms.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

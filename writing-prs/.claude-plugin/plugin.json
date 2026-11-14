@@ -1,0 +1,8 @@
+{
+  "name": "writing-prs",
+  "description": "A length budget for PR descriptions: short Context, short This PR, no diff narration.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "grill-board",
+  "description": "Grill a plan with your team on a shared claude.ai decision board, one round of tickets at a time.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}
