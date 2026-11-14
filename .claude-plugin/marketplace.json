@@ -34,7 +34,7 @@
     {
       "name": "listen",
       "source": "./listen",
-      "description": "Hear the current problem or open question read aloud, or see it as a page. macOS only."
+      "description": "Hear the current problem or open question read aloud, with an optional narrated page."
     },
     {
       "name": "wayfind",

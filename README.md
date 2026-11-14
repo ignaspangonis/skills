@@ -24,7 +24,7 @@ Or copy any `<name>/skills/<name>` folder into `~/.agents/skills/` or `~/.claude
 | `writing-prs` | auto | Holds a PR description to a budget: two sentences of context, three of change, no narrating the diff. Leaves author comments as a pending review. |
 | `wayfind` | `/wayfind` | Turns a foggy idea into a plan. Names the destination, lists the decisions in the way, and resolves them one at a time in a single markdown doc. |
 | `grill-board` | `/grill-board [board url]` | Moves grilling onto a shared claude.ai decision board. The team answers each round of questions as tickets; the next run folds the decisions in and posts the next round. Needs Claude's Artifact tools. |
-| `listen` | `/listen [show] \| again \| stop` | Reads the current problem or open question aloud: where we are, the options, the pick, the question. `show` renders it as a page with diagrams instead. **macOS only**: it uses `say` and `afplay`. |
+| `listen` | `/listen [show] [focus]` | Reads the current problem or open question aloud in plain words: where we are, the options, a pick, and the exact question. `show` opens a page that plays each part and highlights it, with code, tables, and diagrams. macOS only. |
 | `git-conventions` | auto | An example, not a standard: my branch prefixes, numbered stacked branches, and PR-title format. Fork it and put in your own rules. |
 
 ## License
