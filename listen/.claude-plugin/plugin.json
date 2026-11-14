@@ -1,0 +1,8 @@
+{
+  "name": "listen",
+  "description": "Hear the current problem or open question read aloud, or see it as a page. macOS only.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}

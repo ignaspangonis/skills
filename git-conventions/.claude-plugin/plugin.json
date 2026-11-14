@@ -1,0 +1,8 @@
+{
+  "name": "git-conventions",
+  "description": "An example of personal branch and PR-title naming rules, including numbered stacked branches.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignas Pangonis"
+  }
+}
