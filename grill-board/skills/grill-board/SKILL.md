@@ -4,10 +4,11 @@ description: Grill a plan with your team on a shared decision board, one round o
 disable-model-invocation: true
 ---
 
-Grilling, moved out of the chat and onto a shared **decision board**: a claude.ai artifact where the team discusses and decides each question before anyone builds. It follows the rounds model of Matt Pocock's [`grilling`](https://github.com/mattpocock/skills) skill and only changes where the questions go and where the answers come from.
+Grilling, moved out of the chat and onto a shared **decision board**: a claude.ai artifact where the team discusses and decides each question before anyone builds. It follows the rounds model of [`grilling`](https://github.com/mattpocock/skills) skill and only changes where the questions go and where the answers come from.
 
 - No board URL in the arguments → **Start a board**.
 - A claude.ai artifact URL in the arguments → **Sync a board**.
+- Not in Claude → **Create bare HTML**.
 
 ## Grilling in rounds
 
